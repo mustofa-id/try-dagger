@@ -24,7 +24,7 @@ class CommandRouter @Inject constructor(
         val key = inputs.first()
         val command = commands[key] ?: return invalidCommand(input)
 
-        val status = command.handleInput(inputs)
+        val status = command.handleInput(inputs.subList(1, inputs.size))
         if (status == Status.INVALID) {
             println("$key: Invalid arguments")
         }
