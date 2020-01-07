@@ -1,7 +1,7 @@
 package id.mustofa.atm.factory
 
 import dagger.Component
-import id.mustofa.atm.module.HelloWorldModule
+import id.mustofa.atm.module.LoginCommandModule
 import id.mustofa.atm.module.SystemOutModule
 import id.mustofa.atm.router.CommandRouter
 
@@ -12,7 +12,7 @@ import id.mustofa.atm.router.CommandRouter
  * we can annotate it with @Component to have Dagger generate an implementation
  * for us: DaggerCommandRouterFactory.
  */
-@Component(modules = [HelloWorldModule::class, SystemOutModule::class])
+@Component(modules = [LoginCommandModule::class, SystemOutModule::class])
 interface CommandRouterFactory {
 
     // CommandRouter constructor should annotated with @Inject
