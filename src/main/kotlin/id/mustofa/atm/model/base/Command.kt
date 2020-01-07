@@ -1,4 +1,4 @@
-package id.mustofa.atm.command
+package id.mustofa.atm.model.base
 
 interface Command {
 

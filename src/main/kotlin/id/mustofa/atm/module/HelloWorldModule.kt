@@ -2,8 +2,8 @@ package id.mustofa.atm.module
 
 import dagger.Binds
 import dagger.Module
-import id.mustofa.atm.command.Command
-import id.mustofa.atm.command.HelloWorldCommand
+import id.mustofa.atm.model.HelloWorldCommand
+import id.mustofa.atm.model.base.Command
 
 @Module
 abstract class HelloWorldModule {

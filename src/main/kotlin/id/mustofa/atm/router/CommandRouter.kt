@@ -1,7 +1,7 @@
 package id.mustofa.atm.router
 
-import id.mustofa.atm.command.Command
-import id.mustofa.atm.command.Command.Status
+import id.mustofa.atm.model.base.Command
+import id.mustofa.atm.model.base.Command.Status
 import javax.inject.Inject
 
 /**
