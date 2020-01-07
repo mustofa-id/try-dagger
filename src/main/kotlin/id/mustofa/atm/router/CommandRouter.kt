@@ -2,6 +2,7 @@ package id.mustofa.atm.router
 
 import id.mustofa.atm.command.Command
 import id.mustofa.atm.command.Command.Status
+import id.mustofa.atm.command.HelloWorldCommand
 import javax.inject.Inject
 
 /**
@@ -11,9 +12,13 @@ import javax.inject.Inject
  * The @Inject annotation indicates to Dagger that when we ask for a
  * CommandRouter, Dagger should call new CommandRouter().
  */
-class CommandRouter @Inject constructor() {
+class CommandRouter @Inject constructor(helloWorldCommand: HelloWorldCommand) {
 
-    private val commands = emptyMap<String, Command>()
+    private val commands = mutableMapOf<String, Command>()
+
+    init {
+        commands[helloWorldCommand.key()] = helloWorldCommand
+    }
 
     fun route(input: String): Status {
         val inputs = split(input)
