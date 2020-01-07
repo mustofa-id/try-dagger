@@ -2,13 +2,15 @@
 
 package id.mustofa.atm
 
-import id.mustofa.atm.router.CommandRouter
+import id.mustofa.atm.factory.DaggerCommandRouterFactory
 import java.util.*
 
 fun main() {
 
     val scanner = Scanner(System.`in`)
-    val commandRouter = CommandRouter()
+
+    val commandRouterFactory = DaggerCommandRouterFactory.create()
+    val commandRouter = commandRouterFactory.route()
 
     while (scanner.hasNextLine()) {
         val input = scanner.nextLine()

@@ -2,8 +2,16 @@ package id.mustofa.atm.router
 
 import id.mustofa.atm.command.Command
 import id.mustofa.atm.command.Command.Status
+import javax.inject.Inject
 
-class CommandRouter {
+/**
+ * CommandRouter can collect multiple Commands and route input strings
+ * to them based on the first word in the input
+ *
+ * The @Inject annotation indicates to Dagger that when we ask for a
+ * CommandRouter, Dagger should call new CommandRouter().
+ */
+class CommandRouter @Inject constructor() {
 
     private val commands = emptyMap<String, Command>()
 
