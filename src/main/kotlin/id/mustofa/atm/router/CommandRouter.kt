@@ -11,13 +11,9 @@ import javax.inject.Inject
  * The @Inject annotation indicates to Dagger that when we ask for a
  * CommandRouter, Dagger should call new CommandRouter().
  */
-class CommandRouter @Inject constructor(command: Command) {
-
-    private val commands = mutableMapOf<String, Command>()
-
-    init {
-        commands[command.key()] = command
-    }
+class CommandRouter @Inject constructor(
+    private val commands: Map<String, @JvmSuppressWildcards Command>
+) {
 
     fun route(input: String): Status {
         val inputs = split(input)
