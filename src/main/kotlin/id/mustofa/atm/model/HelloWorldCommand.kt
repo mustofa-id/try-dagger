@@ -12,7 +12,7 @@ class HelloWorldCommand @Inject constructor(
 ) : Command {
 
     override fun handleInput(input: List<String>): Result {
-        return if (input.isEmpty()) {
+        return if (input.isNotEmpty()) {
             Result.invalid
         } else {
             outputter.output("world!")
