@@ -3,8 +3,8 @@ package id.mustofa.atm.model
 import id.mustofa.atm.model.base.Command.Result
 import id.mustofa.atm.model.base.Outputter
 import id.mustofa.atm.model.base.SingleArgCommand
-import id.mustofa.atm.router.Database
 import id.mustofa.atm.router.UserCommandsRouter
+import id.mustofa.atm.util.Database
 import id.mustofa.atm.util.enterNestedCommandSet
 import javax.inject.Inject
 

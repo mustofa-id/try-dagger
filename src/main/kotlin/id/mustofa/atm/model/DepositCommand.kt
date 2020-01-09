@@ -1,7 +1,7 @@
 package id.mustofa.atm.model
 
 import id.mustofa.atm.model.base.Outputter
-import id.mustofa.atm.router.Database
+import id.mustofa.atm.util.Database
 import java.math.BigDecimal
 import javax.inject.Inject
 

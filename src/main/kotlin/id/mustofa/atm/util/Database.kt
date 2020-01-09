@@ -1,4 +1,4 @@
-package id.mustofa.atm.router
+package id.mustofa.atm.util
 
 import java.math.BigDecimal
 import javax.inject.Inject
@@ -14,7 +14,7 @@ class Database @Inject constructor() {
     private val accounts = mutableMapOf<String, Account>()
 
     fun getAccount(username: String): Account {
-        return accounts.computeIfAbsent(username, ::Account)
+        return accounts.computeIfAbsent(username, Database::Account)
     }
 
     class Account(

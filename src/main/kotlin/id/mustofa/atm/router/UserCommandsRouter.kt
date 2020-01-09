@@ -4,7 +4,7 @@ import dagger.BindsInstance
 import dagger.Module
 import dagger.Subcomponent
 import id.mustofa.atm.module.UserCommandsModule
-import id.mustofa.atm.router.Database.Account
+import id.mustofa.atm.util.Database.Account
 
 @Subcomponent(modules = [UserCommandsModule::class])
 interface UserCommandsRouter {

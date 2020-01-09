@@ -4,8 +4,8 @@ import dagger.Component
 import id.mustofa.atm.module.HelloWorldModule
 import id.mustofa.atm.module.LoginCommandModule
 import id.mustofa.atm.module.SystemOutModule
-import id.mustofa.atm.router.CommandProcessor
 import id.mustofa.atm.router.UserCommandsRouter
+import id.mustofa.atm.util.CommandProcessor
 import javax.inject.Singleton
 
 /**
