@@ -1,7 +1,10 @@
 package id.mustofa.atm.router
 
 import id.mustofa.atm.model.base.Command
+import id.mustofa.atm.model.base.Command.Result
 import id.mustofa.atm.model.base.Command.Status
+import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.util.invalid
 import javax.inject.Inject
 
 /**
@@ -12,10 +15,11 @@ import javax.inject.Inject
  * CommandRouter, Dagger should call new CommandRouter().
  */
 class CommandRouter @Inject constructor(
-    private val commands: Map<String, @JvmSuppressWildcards Command>
+    private val commands: Map<String, @JvmSuppressWildcards Command>,
+    private val outputter: Outputter
 ) {
 
-    fun route(input: String): Status {
+    fun route(input: String): Result {
         val inputs = split(input)
         if (inputs.isEmpty()) {
             return invalidCommand(input)
@@ -24,16 +28,16 @@ class CommandRouter @Inject constructor(
         val key = inputs.first()
         val command = commands[key] ?: return invalidCommand(input)
 
-        val status = command.handleInput(inputs.subList(1, inputs.size))
-        if (status == Status.INVALID) {
-            println("$key: Invalid arguments")
+        val result = command.handleInput(inputs.subList(1, inputs.size))
+        if (result.status == Status.INVALID) {
+            outputter.output("$key: Invalid arguments")
         }
-        return status
+        return result
     }
 
-    private fun invalidCommand(input: String): Status {
-        println("couldn't understand $input. please try again.")
-        return Status.INVALID
+    private fun invalidCommand(input: String): Result {
+        outputter.output("Couldn't understand $input. Please try again.")
+        return Result.invalid
     }
 
     private fun split(input: String): List<String> {

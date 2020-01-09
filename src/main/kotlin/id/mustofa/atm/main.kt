@@ -2,21 +2,21 @@
 
 package id.mustofa.atm
 
-import id.mustofa.atm.factory.DaggerCommandRouterFactory
+import id.mustofa.atm.factory.DaggerCommandProcessorFactory
 import java.util.*
 
 fun main() {
 
     val scanner = Scanner(System.`in`)
 
-    val commandRouterFactory = DaggerCommandRouterFactory.create()
-    val commandRouter = commandRouterFactory.route()
+    val commandProcessorFactory = DaggerCommandProcessorFactory.create()
+    val commandProcessor = commandProcessorFactory.processor()
 
     while (scanner.hasNextLine()) {
         val input = scanner.nextLine()
         if (input == "/exit") {
             break
         }
-        commandRouter.route(input)
+        commandProcessor.process(input)
     }
 }

@@ -4,8 +4,8 @@ import dagger.Component
 import id.mustofa.atm.module.HelloWorldModule
 import id.mustofa.atm.module.LoginCommandModule
 import id.mustofa.atm.module.SystemOutModule
-import id.mustofa.atm.module.UserCommandsModule
-import id.mustofa.atm.router.CommandRouter
+import id.mustofa.atm.router.CommandProcessor
+import id.mustofa.atm.router.UserCommandsRouter
 import javax.inject.Singleton
 
 /**
@@ -14,18 +14,21 @@ import javax.inject.Singleton
  * But instead of us writing the implementation of CommandRouterFactory,
  * we can annotate it with @Component to have Dagger generate an implementation
  * for us: DaggerCommandRouterFactory.
+ *
+ * refactor: CommandRouterFactory to CommandProcessorFactory
+ * CommandProcessorFactory is CommandProcessor factory that contains a stack of CommandRouters.
  */
 @Singleton
 @Component(
     modules = [
         HelloWorldModule::class,
         LoginCommandModule::class,
-        UserCommandsModule::class,
+        UserCommandsRouter.InstallationModule::class,
         SystemOutModule::class
     ]
 )
-interface CommandRouterFactory {
+interface CommandProcessorFactory {
 
-    // CommandRouter constructor should annotated with @Inject
-    fun route(): CommandRouter
+    // CommandProcessor constructor should annotated with @Inject
+    fun processor(): CommandProcessor
 }
