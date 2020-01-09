@@ -4,10 +4,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import dagger.multibindings.StringKey
-import id.mustofa.atm.model.DepositCommand
-import id.mustofa.atm.model.LogoutCommand
-import id.mustofa.atm.model.WithdrawCommand
-import id.mustofa.atm.model.base.Command
+import id.mustofa.atm.command.DepositCommand
+import id.mustofa.atm.command.LogoutCommand
+import id.mustofa.atm.command.WithdrawCommand
+import id.mustofa.atm.command.base.Command
 
 @Module
 abstract class UserCommandsModule {

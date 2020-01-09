@@ -4,8 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import dagger.multibindings.StringKey
-import id.mustofa.atm.model.LoginCommand
-import id.mustofa.atm.model.base.Command
+import id.mustofa.atm.command.LoginCommand
+import id.mustofa.atm.command.base.Command
 
 @Module
 abstract class LoginCommandModule {

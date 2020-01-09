@@ -1,7 +1,7 @@
 package id.mustofa.atm.util
 
-import id.mustofa.atm.model.base.Command
-import id.mustofa.atm.model.base.Command.Status
+import id.mustofa.atm.command.base.Command
+import id.mustofa.atm.command.base.Command.Status
 import id.mustofa.atm.router.CommandRouter
 import java.util.*
 

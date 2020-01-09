@@ -1,6 +1,6 @@
-package id.mustofa.atm.model.base
+package id.mustofa.atm.command.base
 
-import id.mustofa.atm.model.base.Command.Result
+import id.mustofa.atm.command.base.Command.Result
 import id.mustofa.atm.util.invalid
 
 abstract class SingleArgCommand : Command {

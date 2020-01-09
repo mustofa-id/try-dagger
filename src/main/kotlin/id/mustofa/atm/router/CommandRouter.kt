@@ -1,9 +1,9 @@
 package id.mustofa.atm.router
 
-import id.mustofa.atm.model.base.Command
-import id.mustofa.atm.model.base.Command.Result
-import id.mustofa.atm.model.base.Command.Status
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Command
+import id.mustofa.atm.command.base.Command.Result
+import id.mustofa.atm.command.base.Command.Status
+import id.mustofa.atm.command.base.Outputter
 import id.mustofa.atm.util.invalid
 import javax.inject.Inject
 

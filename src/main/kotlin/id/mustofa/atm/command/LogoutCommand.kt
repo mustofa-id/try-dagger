@@ -1,8 +1,8 @@
-package id.mustofa.atm.model
+package id.mustofa.atm.command
 
-import id.mustofa.atm.model.base.Command
-import id.mustofa.atm.model.base.Command.Result
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Command
+import id.mustofa.atm.command.base.Command.Result
+import id.mustofa.atm.command.base.Outputter
 import id.mustofa.atm.util.Database
 import id.mustofa.atm.util.inputCompleted
 import id.mustofa.atm.util.invalid

@@ -1,6 +1,6 @@
-package id.mustofa.atm.model
+package id.mustofa.atm.command
 
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Outputter
 import id.mustofa.atm.util.Database
 import id.mustofa.atm.util.WithdrawLimiter
 import java.math.BigDecimal

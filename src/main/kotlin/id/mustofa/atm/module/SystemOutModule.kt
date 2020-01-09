@@ -2,8 +2,8 @@ package id.mustofa.atm.module
 
 import dagger.Module
 import dagger.Provides
-import id.mustofa.atm.model.TextOutputter
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Outputter
+import id.mustofa.atm.util.TextOutputter
 
 @Module
 class SystemOutModule {

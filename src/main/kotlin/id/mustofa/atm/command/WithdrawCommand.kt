@@ -1,6 +1,6 @@
-package id.mustofa.atm.model
+package id.mustofa.atm.command
 
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Outputter
 import id.mustofa.atm.module.AmountsModule.MaximumWithdrawal
 import id.mustofa.atm.module.AmountsModule.MinimumBalance
 import id.mustofa.atm.util.Database

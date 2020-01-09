@@ -1,6 +1,6 @@
-package id.mustofa.atm.model
+package id.mustofa.atm.util
 
-import id.mustofa.atm.model.base.Outputter
+import id.mustofa.atm.command.base.Outputter
 
 class TextOutputter : Outputter {
 

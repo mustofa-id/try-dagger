@@ -1,4 +1,4 @@
-package id.mustofa.atm.model.base
+package id.mustofa.atm.command.base
 
 interface Outputter {
 
