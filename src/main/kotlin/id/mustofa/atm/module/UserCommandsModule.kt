@@ -6,6 +6,7 @@ import dagger.multibindings.IntoMap
 import dagger.multibindings.StringKey
 import id.mustofa.atm.model.DepositCommand
 import id.mustofa.atm.model.LogoutCommand
+import id.mustofa.atm.model.WithdrawCommand
 import id.mustofa.atm.model.base.Command
 
 @Module
@@ -15,6 +16,11 @@ abstract class UserCommandsModule {
     @IntoMap
     @StringKey("deposit")
     abstract fun depositCommand(command: DepositCommand): Command
+
+    @Binds
+    @IntoMap
+    @StringKey("withdraw")
+    abstract fun withdrawCommand(command: WithdrawCommand): Command
 
     @Binds
     @IntoMap

@@ -1,6 +1,7 @@
 package id.mustofa.atm.factory
 
 import dagger.Component
+import id.mustofa.atm.module.AmountsModule
 import id.mustofa.atm.module.HelloWorldModule
 import id.mustofa.atm.module.LoginCommandModule
 import id.mustofa.atm.module.SystemOutModule
@@ -24,7 +25,8 @@ import javax.inject.Singleton
         HelloWorldModule::class,
         LoginCommandModule::class,
         UserCommandsRouter.InstallationModule::class,
-        SystemOutModule::class
+        SystemOutModule::class,
+        AmountsModule::class
     ]
 )
 interface CommandProcessorFactory {
