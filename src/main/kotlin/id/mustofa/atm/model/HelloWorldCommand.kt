@@ -11,8 +11,6 @@ class HelloWorldCommand @Inject constructor(
     private val outputter: Outputter
 ) : Command {
 
-    override fun key() = "hello"
-
     override fun handleInput(input: List<String>): Result {
         return if (input.isEmpty()) {
             Result.invalid

@@ -14,8 +14,6 @@ class LoginCommand @Inject constructor(
     private val userCommandsRouterFactory: UserCommandsRouter.Factory
 ) : SingleArgCommand() {
 
-    override fun key() = "login"
-
     override fun handleArg(arg: String): Result {
         val account = database.getAccount(arg)
         outputter.output("${account.username} is logged in with balance: ${account.balance}.")

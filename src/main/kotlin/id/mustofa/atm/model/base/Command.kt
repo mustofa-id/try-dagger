@@ -5,8 +5,6 @@ import java.util.*
 
 interface Command {
 
-    fun key(): String
-
     fun handleInput(input: List<String>): Result
 
     class Result(

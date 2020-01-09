@@ -10,8 +10,6 @@ class DepositCommand @Inject constructor(
     private val outputter: Outputter
 ) : BigDecimalCommand(outputter) {
 
-    override fun key() = "deposit"
-
     override fun handleAmount(amount: BigDecimal) {
         account.deposit(amount)
         outputter.output("${account.username} now has: ${account.balance}")
